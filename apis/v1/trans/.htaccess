@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^subHistoryByDate subHistoryByDate.php
+RewriteRule ^allSubHistory/([A-Za-z]+)$ allSubHistory.php?acctId=$1
+RewriteRule ^allSubHistory allSubHistory.php
+RewriteRule ^([^/.]+)/?$ $1.php
+RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

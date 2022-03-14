@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteRule ^getNotification/([A-Za-z]+)$ getNotification.php?acctId=$1
+RewriteRule ^getNotification getNotification.php
+RewriteRule ^notificationService notificationService.php
+RewriteRule ^editProfile editProfile.php
+RewriteRule ^setSqa setSqa.php
+RewriteRule ^resetPass resetPass.php
+RewriteRule ^acctLookup acctLookup.php
+RewriteRule ^uReg uReg.php
+RewriteRule ^userAuth userAuth.php
+RewriteRule ^([^/.]+)/?$ $1.php
+RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule ^confirmSubPln confirmSubPln.php
+RewriteRule ^createSub createSub.php
+RewriteRule ^premiumPlan/([A-Za-z]+)$ premiumPlan.php?sysCur=$1
+RewriteRule ^premiumPlan premiumPlan.php
+RewriteRule ^setupEmerg setupEmerg.php
+RewriteRule ^getEcat getEcat.php
+RewriteRule ^([^/.]+)/?$ $1.php
+RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
